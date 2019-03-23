@@ -22,8 +22,11 @@ html>* {
 }
 
 header {
+	display: flex;
+	flex-direction: row;
     width: 100vw;
-    height: 30rem;
+    height: 40rem;
+    color:#ffff;
     background: rgba(235, 233, 249, 1);
     background: rgba(212, 207, 242, 1);
     background: -moz-linear-gradient(left, rgba(212, 207, 242, 1) 0%, rgba(6, 4, 52, 1) 0%, rgba(87, 83, 154, 1) 52%, rgba(124, 119, 201, 1) 76%, rgba(161, 155, 248, 1) 100%);
@@ -35,7 +38,17 @@ header {
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d4cff2', endColorstr='#a19bf8', GradientType=1);
 }
 
+header::after{
+	position:absolute;
+  content: " ";
+  display:block;
+  background: linear-gradient(to right, rgba(212, 207, 242, 1) 0%, rgba(6, 4, 52, 1) 0%, rgba(87, 83, 154, 1) 52%, rgba(124, 119, 201, 1) 76%, rgba(161, 155, 248, 1) 100%);
+   width:100%;
+}
+
 nav {
+	position: absolute;
+	top:0;
     width: 100vw;
     display: flex;
     flex-direction: row-reverse;
@@ -47,9 +60,90 @@ nav img {
     top: 10px;
     left: 10px;
 }
-
 nav .sign {
     margin: 1rem;
     text-decoration: none;
-    color:#ffff;
+    color:#ffffff;
+    padding: .5rem;
+    width: 5rem;
+    text-align: center;
+
 }
+
+a.sign.green {
+	background-color: hsl(163, 95%, 43%);
+
+}
+header section{
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	margin-top: 5rem;
+	height: 400px;
+	
+}
+
+header .sideContent{
+	width: 100%;
+	height: auto;
+	padding: 3rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+	
+}
+header .sideContent>*{
+	text-align: center;
+}
+a.hero-button{
+	width: 10rem;
+	padding: .5rem;
+	text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+	background-color: hsl(163, 95%, 43%);
+}
+
+div .hero-image{
+    width: 100%;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+background-image: url(./images/illustration-hero.svg)
+}
+
+section.content{
+	min-height: 100px;
+	background-color: #ffffff;
+}
+div.triangle{
+	display: block;
+	position: relative;
+	width: 100;
+	height: 60px;
+	transform:translateY(-60px);
+	background-color: #ffffff;
+
+} 
+.triangle::before{
+	content:'';
+	position: absolute;
+	padding-bottom: 76%;
+	width: 41.7%;	
+	background-color: inherit;
+	-webkit-transform-origin: 0 0;
+	transform-origin: 0 0;
+	z-index: -1;
+	transform: rotate(-38deg) skewX(46deg) translateX(-62%) translateY(-18%);
+
+
+}
+
+@media only screen and(max-width:480px){
+	header section{
+		flex-direction: column-reverse !important;
+	}
+}
+
