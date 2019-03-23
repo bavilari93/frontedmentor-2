@@ -22,8 +22,6 @@ html>* {
 }
 
 header {
-	display: flex;
-	flex-direction: row;
     width: 100vw;
     height: 40rem;
     color:#ffff;
@@ -38,13 +36,7 @@ header {
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d4cff2', endColorstr='#a19bf8', GradientType=1);
 }
 
-header::after{
-	position:absolute;
-  content: " ";
-  display:block;
-  background: linear-gradient(to right, rgba(212, 207, 242, 1) 0%, rgba(6, 4, 52, 1) 0%, rgba(87, 83, 154, 1) 52%, rgba(124, 119, 201, 1) 76%, rgba(161, 155, 248, 1) 100%);
-   width:100%;
-}
+
 
 nav {
 	position: absolute;
@@ -141,9 +133,10 @@ div.triangle{
 
 }
 
-@media only screen and(max-width:480px){
-	header section{
-		flex-direction: column-reverse !important;
-	}
-}
+@media only screen
+and (min-width: 320px)
+and (max-width: 480px) {
+header section{
+flex-direction:column-reverse !important; }
 
+}
