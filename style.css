@@ -2,7 +2,7 @@ body {
     border: 0;
     margin: 0;
     padding: 0;
-    font-family:'Open Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-weight: 700;
 }
 
@@ -26,7 +26,7 @@ html>* {
 header {
     width: 100vw;
     height: 40rem;
-    color:#ffff;
+    color: #ffff;
     background: rgba(235, 233, 249, 1);
     background: rgba(212, 207, 242, 1);
     background: -moz-linear-gradient(left, rgba(212, 207, 242, 1) 0%, rgba(6, 4, 52, 1) 0%, rgba(87, 83, 154, 1) 52%, rgba(124, 119, 201, 1) 76%, rgba(161, 155, 248, 1) 100%);
@@ -41,9 +41,9 @@ header {
 
 
 nav {
-	position: absolute;
-	top:0;
-	padding:1rem;
+    position: absolute;
+    top: 0;
+    padding: 1rem;
     width: 100vw;
     display: flex;
     flex-direction: row-reverse;
@@ -56,101 +56,224 @@ nav img {
     top: 30px;
     left: 15px;
 }
+
 nav .sign {
     margin: 1rem;
     text-decoration: none;
-    color:#ffffff;
+    color: #ffffff;
     padding: .5rem;
-    width: 5rem;
+    width: 10rem;
     text-align: center;
 
 }
 
 a.sign.green {
-	background-color: hsl(163, 95%, 43%);
+    background-color: hsl(163, 95%, 43%);
 
 }
-header section{
-	width: 100%;
-	display: flex;
-	flex-direction: row;
-	margin-top: 5rem;
-	height: 400px;
-	
+
+header section {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 5rem;
+    height: 400px;
+
 }
 
-header .sideContent{
-	width: 100%;
-	height: auto;
-	padding: 3rem;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-content: center;
-	
+header .sideContent {
+    width: 100%;
+    height: auto;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+
 }
-header .sideContent>*{
-	text-align: center;
+
+header .sideContent>* {
+    text-align: center;
 }
-a.hero-button{
-	width: 10rem;
-	padding: .5rem;
-	padding-left: 3rem;
-	padding-right: 3rem;
-	text-align: center;
+
+a.hero-button {
+    width: 10rem;
+    padding: .5rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    text-align: center;
     text-decoration: none;
     color: #ffffff;
-	background-color: hsl(163, 95%, 43%);
+    background-color: hsl(163, 95%, 43%);
 }
 
-div .hero-image{
+div .hero-image {
     width: 100%;
     height: 400px;
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-background-image: url(./images/illustration-hero.svg)
+    background-image: url(./images/illustration-hero.svg)
 }
 
-section.content{
-	min-height: 100px;
-	background-color: #ffffff;
+/*features section*/
+section.content {
+    min-height: 100px;
+    background-color: #ffffff;
 }
-div.triangle{
-	display: block;
-	position: relative;
-	width: 100;
-	height: 60px;
-	transform:translateY(-60px);
-	background-color: #ffffff;
 
-} 
-.triangle::before{
-	content:'';
-	position: absolute;
-	padding-bottom: 76%;
-	width: 41.7%;	
-	background-color: inherit;
-	-webkit-transform-origin: 0 0;
-	transform-origin: 0 0;
-	z-index: -1;
-	transform: rotate(-38deg) skewX(46deg) translateX(-62%) translateY(-18%);
-
+div.triangle {
+    display: block;
+    position: relative;
+    width: 100;
+    height: 60px;
+    transform: translateY(-60px);
+    background-color: #ffffff;
 
 }
 
-@media only screen
-and (min-width: 320px)
-and (max-width: 480px) {
-header section{
-flex-direction:column-reverse !important; }
-nav img{
-	height: 25px;
+.triangle::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    padding-bottom: 76%;
+    width: 41.7%;
+    background-color: inherit;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+
+    transform: rotate(-38deg) skewX(46deg) translateX(-62%) translateY(-18%);
 }
-nav .sign {
-	width: 5rem;
+
+.content h1 {
+    position: relative;
+    text-align: center;
+    color: hsl(243, 87%, 12%);
+}
+
+.inner-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner-content img {
+    position: relative;
+    width: 40%;
+    padding: 20px;
+}
+
+.side-features {
+    position: relative;
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-left: 50px;
 
 
 }
 
+.side-features section {
+    width: 50%;
+    padding: 1rem;
 }
+
+.side-features section h4 {
+    color: hsl(243, 87%, 12%);
+    text-transform: capitalize;
+}
+
+.side-features section p {
+    color: hsl(0, 0%, 50%);
+    font-weight: 100;
+}
+
+/*sign up section*/
+.signup {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.signup p {
+    margin-top: -1rem;
+    padding: 40px;
+    text-align: center;
+    color: hsl(243, 87%, 12%);
+    font-weight: 100;
+
+}
+
+.signup input {
+    width: 200px;
+    height: 2rem;
+    padding-left: 1rem;
+    color: hsl(0, 0%, 50%);
+    border-radius: 5px;
+    border-width: thin;
+}
+
+a.join{
+	background-color: hsl(163, 95%, 43%);
+	text-decoration: none;
+	color: #fff;
+	border-radius: 5px;
+	font-weight: 100;
+	padding-left: 3rem;
+	padding-right: 3rem;
+	padding-top: .4rem;
+    padding-bottom: .4rem;
+    margin-left:2rem;
+    box-shadow: 2px 1px 12px darkgrey;
+
+}
+
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+    header section {
+        flex-direction: column-reverse !important;
+    }
+
+    nav img {
+        height: 25px;
+    }
+
+    nav .sign {
+        width: 5rem;
+
+    }
+
+    .content h1 {
+        padding: 80px;
+    }
+
+    .inner-content {
+        flex-direction: column;
+    }
+
+    .side-features {
+        flex-direction: column;
+        margin-left: 0px;
+    }
+
+    .inner-content img {
+        padding: 0;
+    }
+
+    .side-features section {
+        width: 90%;
+    }
+    .signup-form{
+    	display: flex;
+    	flex-direction: column;
+    }
+    a.join{
+    	margin-left:0;
+    	margin-top: 1rem;
+    	    text-align: center;
+    }
