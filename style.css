@@ -21,6 +21,7 @@ html>* {
     justify-content: center;
     align-content: center;
     width: 100vw;
+        overflow-x: hidden;
 }
 
 header {
@@ -194,14 +195,17 @@ div.triangle {
 
 /*sign up section*/
 .signup {
+	position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 2rem;
+        z-index: 1;
 }
 
 .signup p {
-    margin-top: -1rem;
+    margin-top: -2rem;
     padding: 40px;
     text-align: center;
     color: hsl(243, 87%, 12%);
@@ -229,10 +233,105 @@ a.join{
 	padding-top: .4rem;
     padding-bottom: .4rem;
     margin-left:2rem;
-    box-shadow: 2px 1px 12px darkgrey;
+    box-shadow: 2px 1px 4px darkgrey;
 
 }
 
+div.slanted {
+    display: block;
+    position: relative;
+    width: 100;
+    height: 60px;
+    transform: translateY(48px);
+    background-color: white;
+
+}
+
+.slanted::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    padding-bottom: 119%;
+    width: 41.7%;
+    background-color: inherit;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    transform: rotate(-38deg) skewX(46deg) translateX(-57%) translateY(-4%);
+}
+
+/*footer*/
+footer{
+
+	background: hsl(243, 87%, 12%);
+	margin-top: 2rem;
+	display: flex;
+	flex-direction: row;	
+}
+footer section{
+	flex:1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+}
+
+.contact{
+	margin-top: 5rem;
+}
+.contact .logo{
+
+	margin-bottom:2rem;
+}
+.contact div{
+	display: flex;
+    flex-direction: row;
+    width: 80%;
+    justify-content: left;
+    align-items: center;
+    margin-left: 2rem;
+    
+}
+
+.contact div img{
+	height: 24px;
+}
+.contact div p{
+	font-weight: 100;
+    margin-left: 18px;
+        font-size: small;
+}
+/*footer navigation*/
+.navigation{
+	width: 100%;
+	display:flex;
+	flex-direction: row;
+	align-items: baseline;
+}
+.navigation div{
+	width: 30%;
+	height: 50%;
+	margin-top: 11rem;
+	padding: 2rem;
+
+}
+.navigation div:nth-child(1){
+	border-left: white solid .06rem;
+}
+.navigation div:nth-child(3){
+	border-right: white solid .06rem;
+	padding-right: 6rem;
+}
+.navigation ul{
+    list-style-position: inherit;
+        font-weight: 100;
+            list-style: none;
+            padding-left: 0pt;
+}
+.navigation li{
+	        font-size: .8rem;
+	        margin: 0 0 4px 0;
+}
 
 @media only screen and (min-width: 320px) and (max-width: 480px) {
     header section {
@@ -272,8 +371,40 @@ a.join{
     	display: flex;
     	flex-direction: column;
     }
+    .signup p {
+    margin-top: -6rem;
+	}
     a.join{
     	margin-left:0;
     	margin-top: 1rem;
     	    text-align: center;
     }
+    footer{
+    	flex-direction: column;
+    }
+
+    .contact{	 
+    align-items: baseline;
+    }
+    .contact .logo{
+    	margin-left: 2rem;
+    }
+    .navigation{
+    	flex-direction: column;
+    }
+    .navigation div{
+    	margin-top: 0rem;
+    	
+    }
+    .navigation div:nth-child(1){
+    	border:none;
+    }
+    .navigation div:nth-child(3){
+    	border:none;
+    }
+}
+
+
+
+
+
